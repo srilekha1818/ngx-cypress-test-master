@@ -99,7 +99,7 @@ describe ('our first test suite',() => {
         cy.contains('nb-card','Common Datepicker').find('input').then(input => {
           cy.wrap(input).click()
           cy.get('nb-calendar-day-picker').contains('24').click()
-          cy.wrap(input).invoke('prop','value').should('contain','Nov 24, 2022')
+          cy.wrap(input).invoke('prop','value').should('contain','Dec 24, 2022')
         })
       })
       it('radio button',() => {
@@ -246,7 +246,7 @@ it('tooltip',() =>{
         cy.contains('nb-card','Colored Tooltips').contains('Default').click()
         cy.get('nb-tooltip').should('contain','This is a tooltip')
 })
-it.only('dialog box',() => {
+it('dialog box',() => {
   cy.visit('/')
       cy.contains('Tables & Data').click()
         cy.contains('Smart Table').click()
